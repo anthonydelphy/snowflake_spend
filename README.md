@@ -29,7 +29,7 @@ snowflake_spend:
   enabled: true
 ```
 
-You will need a csv called `snowflake_contract_rates.csv` which has two columns: effective date and rate. The effective date is the day the new contracted rate started and it should be in YYYY-MM-DD format. The rate is the per credit price for the given time period. You can see how the data team configures [their csv file](https://gitlab.com/gitlab-data/analytics/blob/master/transform/snowflake-dbt/data/snowflake_contract_rates.csv). You will need to run `dbt seed` for the csv to be loaded as a table and for the model to run succesfully.
+You will need a csv called `snowflake_contract_rates.csv` which has two columns: effective date and rate. The effective date is the day the new contracted rate started and it should be in YYYY-MM-DD format. The rate is the per credit price for the given time period. You can see how the data team configures [their csv file](https://gitlab.com/gitlab-data/analytics/-/blob/master/transform/snowflake-dbt/seeds/seed_data/snowflake_contract_rates.csv). You will need to run `dbt seed` for the csv to be loaded as a table and for the model to run succesfully.
 
 These models are documented and tested.
 If you'd like to see what these look like live, you can see them in [the GitLab Data Team's public dbt docs](https://dbt.gitlabdata.com/#!/model/model.snowflake_spend.snowflake_amortized_rates).
